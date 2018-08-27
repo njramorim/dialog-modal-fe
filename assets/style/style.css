@@ -40,7 +40,7 @@ a {
 .Test__description {
   margin: 0;
   font-size: 1.4rem;
-  font-family: Verdana;
+  font-family: Verdana,Geneva,sans-serif; 
   line-height: 2.2rem;
   color: #555555;
 }
