@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Enjoei - Teste front-end</title>
+    <link rel="icon" type="image/x-icon" href="https://www.enjoei.com.br/favicon.ico" />
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Proxima+Nova:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/style/dialog-modal.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.10/dialog-polyfill.min.css">
+  </head>
+
+  <body>
+    <div class="Test">
+      <p class="Test__description">
+        Olá. <br><br>
+        Precisamos que uma modal abra quando o usuário clicar <strong><a href="#dialog">aqui</a></strong>. <br><br>
+        O desenho da modal, que deve ser responsiva, está incluído na pasta que enviamos a você. <br><br>
+        Quando o formulário da modal é enviado, os dados devem ser postados com Ajax em <strong>/api/newsletter</strong> e a modal deve ser fechada. <br><br>
+        (Já foi feito um retorno falso para a URL da API, então fique tranquilo, você só precisa fazer o POST.) <br><br>
+        Você pode subir um servidor com <strong>php -S 0.0.0.0:8000</strong>, <strong>python -m SimpleHTTPServer</strong> ou <strong>ruby -run -ehttpd . -p 8000</strong>. <br><br>
+        Use (ou não use) qualquer biblioteca, ferramenta ou convenção que achar indicada para finalizar a tarefa. <br><br>
+        Por favor, faça um commit (Git) sem alterações quando iniciar a tarefa.
+      </p>
+
+      <img class="Test__logo" src="https://assets3.enjoei.com.br/assets/v2/shared/brand/logo-desktop-x1-c6efd4344c5d7ef839202be76c153e77.png" alt="Enjoei :P" />
+    </div>
+
+    <div class="Dialog__wrapper">
+      <dialog id="dialog" class="Dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+        <div class="Dialog__content">
+          <form id="newsletter" name="newsletter" class="Dialog__form" method="dialog" >
+            <fieldset>
+              <h1 id="dialog-title" class="Dialog__title">ENJUNEWS</h1>
+              <p id="dialog-description" class="Dialog__description">
+                receba novidades do site mais legal do brasiô, coloca&nbsp;seu nome e email ai embaixo e&nbsp;manda&nbsp;bala :)
+              </p>
+              
+              <fieldset class="Dialog__fieldset">
+                <label for="name" class="Dialog__label">Nome</label>
+                <input type="text" name="name" id="name" class="Dialog__input" required/>
+              </fieldset>
+              
+              <fieldset class="Dialog__fieldset">
+                <label for="email" class="Dialog__label">Email</label>
+                <input type="email" name="email" id="email" class="Dialog__input" required/>
+              </fieldset>
+            </fieldset>
+
+            <button aria-label="Enviar dados" class="Dialog__button" id="newsletterSubmit">
+              quero receber novidades
+            </button>
+          </form>
+          <a href="#" aria-label="Fechar Modal" class="Dialog__close">
+            <i class="icon__close"></i>
+          </a>
+        </div>
+        <aside class="Dialog__closeField"></aside>
+      </dialog>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.10/dialog-polyfill.min.js"></script>
+    <script src="assets/script/index.js">
+    </script>
+  </body>
+</html>
